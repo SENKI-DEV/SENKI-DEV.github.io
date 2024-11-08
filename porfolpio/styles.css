@@ -1,0 +1,444 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+nav{
+   position:sticky;
+    top:0;
+    padding: 0.5rem;
+    background-color: #000000;
+    display: flex;
+    justify-content:  space-between;
+    align-self: center;
+    color: #ffffff;
+    transition: top 0.3s;
+    box-sizing: border-box;
+}
+ul { 
+    list-style-type:  none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-weight: 600;
+}
+li a{
+    color: rgb(255, 255, 255); 
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+a:hover{ 
+    color: red;
+}
+
+.menu{
+    display: flex;
+    align-self: center;
+}
+.account{
+    display: flex;
+    align-self: center
+}
+
+
+
+
+
+footer{
+    display:flex;
+    padding:10px;
+    border-radius:5px;
+    background-color:rgb(0, 0, 0);
+    
+   
+}
+#fott{
+    align-self: center;
+    width: auto;
+    height: 100px;
+    margin: 0%;
+}
+
+div{
+    display:flex;
+    
+    
+    
+}
+.a{
+    margin-top:5px;
+    margin-left:10rem;
+    font-size:17px;
+    align-self: center;
+
+    
+}
+body{
+    background-color: #000000;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    width: 1400px;
+
+  
+}
+nav img{
+    width: auto;
+    height: 100px;
+    margin: 0%;
+}
+
+
+#HOME h1{
+    font-size: 40px;
+    display: block;
+    margin: 0;
+  
+    padding-left: 0;
+
+  width: 100%;
+    left: 0;
+    opacity: 0; /* Start invisible */
+    transform: translateX(-100%); /* Start off-screen (right side) */
+    transition: all 0.8s ease-out; /* Smooth transition for the animation */
+}
+#HOME{
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+#HOME div .fh{
+    margin-top: 500px;
+}
+#HOME div #picko{
+display: flex;
+position: absolute;
+margin: 0;
+
+left: 0;
+top: 0;
+max-width: 31.25rem;
+margin-top: 2.1rem;
+margin-left: 5rem;
+height: auto;
+}
+.sh{
+   
+    color: #12be90;
+}
+#HOME div .fh.visible{
+    opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Move to its normal position */
+}
+#HOME div .sh.visible{
+    opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Move to its normal position */
+}
+#HOME div #introp{
+    font-weight: normal;
+    display: inline;
+
+    width: 60rem;
+    right: 0;
+    margin-top: 9rem;
+    font-size: 1.3rem;
+    justify-content: flex-start;
+    text-align: justify;
+    align-items: baseline;
+}
+.cursor {
+    display: inline;
+    font-size: 1.3rem;
+    color: #ffffff;
+    animation: blink 0.7s infinite;
+  }
+  
+  /* Blinking cursor animation */
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+/*PROJECT PART*/
+#PROJECTS{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 0;
+}
+#PROJECTS .ldmode {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 1300px;
+    display: flex;
+    align-items: center;
+   
+    background-color: #f0f0f0;
+}
+
+#apppara{
+    width: 90rem;
+    right: 0;
+    font-size: 1.3rem;
+    justify-content: flex-start;
+    text-align: justify;
+    align-items: flex-start;
+    margin-right: 200px;
+    margin-bottom: 10rem;
+    position:relative;
+    display: flex;
+  
+}
+#apppara #editpara{
+    margin-top: 8.5rem;
+    flex: 1;
+
+}
+#elibpic{
+    max-width: 500px; /* Limit the image size */
+    height: auto; /* Keep the image's aspect ratio */
+    margin-left: auto;
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px); /* Adjust the distance as needed */
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    width: 100%;
+    
+    height: 400px; /* Height of the container */
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50px; /* Start just off the right edge */
+    width: 100px;  /* Initial width of the circle */
+    height: 100px; /* Initial height of the circle */
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%; /* Make it circular */
+    transform: translate(50%, -50%); /* Center it vertically */
+    z-index: 0; /* Behind the content */
+    transition: width 0.5s ease, height 0.5s ease, right 0.5s ease; /* Smooth transition for size and position */
+}
+
+.container.active::before {
+    right: 0; /* Move it to the edge of the container */
+    width: 3000vw; /* Expand to cover the entire section */
+    height: 3000vw; /* Ensure the circle maintains a circular shape */
+}
+
+.image-section {
+    flex: 0 0 50%; /* Allow the image section to take up 30% of the container */
+    max-width: 500px; /* Set a maximum width */
+    transition: all 0.5s ease;
+    z-index: 1; /* Ensure content is above the circle */
+}
+
+.image-section img {
+    max-width: 100%; /* Ensures the image fits within its container */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 500px; /* Set a maximum height for the image */
+    padding-top: 110px;
+}
+
+.text-section {
+    position: absolute; /* Keep the text in the center */
+    left: 50%;
+    top: 50%; /* Center text vertically */
+    transform: translate(-50%, -50%); /* Center it horizontally and vertically */
+    text-align: center; /* Center text */
+    z-index: 1;
+    color: black;
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    margin: 0;
+
+}
+.text-section h1 {
+    font-size: 55px; /* Change this value to whatever size you want */
+    font-weight: bold; /* Optional: Adjust the weight if needed */
+    text-align: center; /* Optional: Keep it centered */
+    margin-bottom: 0;
+  
+  
+}
+
+.container.active .text-section {
+    color: white; /* Change text color when active */
+}
+
+.hidden {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+}
+
+.container.active #image1 {
+    transform: translateX(-100%); /* Slide out first image */
+}
+
+.container.active #image2 {
+    opacity: 1; /* Make second image visible */
+    transform: translateX(0); /* Slide in second image */
+    display: block;
+}
+
+/*SKILLS8*/
+#skillhead{
+    margin-left: 5rem;
+
+}
+#SKILLS{
+    margin-top: 10rem;
+    margin-left: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15rem;
+}
+.containerskills {
+    display: flex;
+    gap: 40px; /* Space between logos */
+}
+
+.language-card {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.css-card{
+    position: relative;
+    width: 18rem;
+    height: 18rem;
+    cursor: pointer;
+}
+
+.language-logo {
+    width: 100%; /* Adjust width to fit the container */
+    height: 100%; /* Adjust height to fit the container */
+    object-fit: contain; /* Keep the aspect ratio */
+    transition: transform 0.3s;
+}
+
+.language-card:hover .language-logo {
+    animation: float 2s ease-in-out infinite;
+    transform: scale(1.1);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5rem);
+    }
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-2rem);
+    color: white; /* Text color */
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    white-space: nowrap;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.language-card:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(5rem); /* Slide down effect */
+}
+
+.outlined-button {
+    background-color: #000000; /* Button background color */
+    color: rgb(255, 255, 255); /* Text color */
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid #ffffff; /* Border color */
+    border-radius: 5rem;
+    cursor: pointer;
+    outline: none;
+
+    transition: background-color 0.3s, border-color 0.3s; /* Transition for hover effect */
+  }
+
+  /* Hover effect */
+  .outlined-button:hover {
+    background-color: #ffffff; /* Change background on hover */
+    border-color: #ffffff; /* Change border on hover */
+    color: #000000;
+  }
+  #SERVICES{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15rem;
+}
+#serviceshead{
+    margin-left: 5rem;
+}
+.service-card {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.service-card:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(5rem); /* Slide down effect */
+}
+.service-card:hover .language-logo {
+    animation: float 2s ease-in-out infinite;
+    transform: scale(1.1);
+}
+#CONTACTS{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25rem;
+    padding-bottom: 15rem;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  #projecthead{
+
+    margin-left: 5rem;
+  }
